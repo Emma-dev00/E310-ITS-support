@@ -1,0 +1,465 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#314769","on-tertiary-container":"#4489fd","secondary-container":"#fed255","tertiary-container":"#002353","on-primary-fixed":"#001c3b","primary-fixed":"#d5e3ff","primary":"#001026","surface-tint":"#495f82","error":"#ba1a1a","outline":"#74777f","background":"#f8f9ff","error-container":"#ffdad6","surface-bright":"#f8f9ff","on-tertiary-fixed-variant":"#004395","surface-dim":"#cedbf0","tertiary-fixed-dim":"#adc6ff","inverse-primary":"#b1c7f0","on-surface-variant":"#44474e","primary-container":"#0b2545","surface":"#f8f9ff","secondary-fixed-dim":"#ecc246","tertiary-fixed":"#d8e2ff","on-secondary-container":"#735a00","on-error-container":"#93000a","tertiary":"#000f2b","on-error":"#ffffff","on-primary-container":"#778db2","on-tertiary":"#ffffff","on-secondary-fixed":"#241a00","surface-container-lowest":"#ffffff","surface-variant":"#d7e3f9","outline-variant":"#c4c6cf","on-surface":"#101c2c","surface-container-low":"#eff4ff","on-tertiary-fixed":"#001a42","secondary":"#755b00","inverse-surface":"#253141","on-primary":"#ffffff","on-background":"#101c2c","surface-container-highest":"#d7e3f9","inverse-on-surface":"#eaf1ff","primary-fixed-dim":"#b1c7f0","surface-container-high":"#dce9ff","secondary-fixed":"#ffe08e","on-secondary-fixed-variant":"#584400","on-secondary":"#ffffff","surface-container":"#e6eeff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2rem","space-md":"1rem",margin:"1.5rem","space-xs":"0.25rem","gutter-lg":"1.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-sm":"0.5rem",gutter:"1rem"},fontFamily:{"body-md":["Hanken Grotesk"],"headline-xl-mobile":["DM Sans"],"headline-xl":["DM Sans"],"body-lg":["Hanken Grotesk"],"body-sm":["Hanken Grotesk"],"headline-lg":["DM Sans"],caption:["Hanken Grotesk"],"label-md":["Hanken Grotesk"],"headline-sm":["DM Sans"],"headline-md":["DM Sans"],"label-sm":["Hanken Grotesk"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-xl-mobile":["28px",{lineHeight:"36px",fontWeight:"700"}],"headline-xl":["36px",{lineHeight:"44px",fontWeight:"700"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["26px",{lineHeight:"34px",fontWeight:"600"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"16px",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-[220px] bg-primary-container text-on-primary z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-primary"><div class="flex items-center gap-space-sm"><img alt="E310 ITS Official Logo" class="h-8 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1UEgadsV6FpwoVhl5h508E0W39OQ3wvpVqyg_s9JnimqG7Binduw8eshJhaNJd9HknYe4euyig8VOM1WJSqElzDvqif63hAnbEqQrF_Fcj8AHXgnwF3K1SlFnEnuPQlFCk5eGyUdEWfj_MUwlWs3WmM0AUHh6MdWMdcOG7RWMF4CRKxAnFv98h8ZUGpLcoQKPsyCsHJd9HDKqMxFfEG4JxFskXVA-T1DSrF4wVVMxT62g"><span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider font-semibold">Console</span></div></div><nav class="flex flex-col gap-space-xs p-space-sm" data-active-classes="bg-tertiary-container text-on-tertiary-container font-semibold rounded-lg">
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+            <span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+            <span class="font-label-md text-label-md">All Tickets</span>
+          </a>
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg bg-[#C9A227] text-primary font-semibold transition-colors shadow-sm">
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">group</span>
+            <span class="font-label-md text-label-md">Manage Users</span>
+          </a>
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+            <span class="material-symbols-outlined text-[18px]">person_add</span>
+            <span class="font-label-md text-label-md">Onboard New User</span>
+          </a>
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+            <span class="material-symbols-outlined text-[18px]">monitoring</span>
+            <span class="font-label-md text-label-md">Analytics &amp; SLA</span>
+          </a>
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+            <span class="material-symbols-outlined text-[18px]">category</span>
+            <span class="font-label-md text-label-md">Manage Categories</span>
+          </a>
+        </nav></div><div class="p-space-sm bg-primary flex flex-col gap-space-xs">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-8 h-8 rounded-full bg-[#C9A227] text-primary flex items-center justify-center font-headline-sm text-[13px] font-bold">SJ</div>
+            <div class="flex flex-col min-w-0">
+              <span class="font-label-md text-label-md text-on-primary truncate">Sarah Jenkins</span>
+              <span class="font-caption text-caption text-on-primary-container truncate">Lead Administrator</span>
+            </div>
+          </div>
+          <div class="mt-space-xs">
+            <span class="inline-block px-space-sm py-[2px] rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-bold uppercase tracking-wider">Technical Lead / Admin</span>
+          </div>
+        </div></aside><div class="pl-[220px]"><header class="fixed top-0 left-[220px] right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-mobile md:px-margin"><div class="flex items-center gap-space-md"><img alt="E310 ITS Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UEgadsV6FpwoVhl5h508E0W39OQ3wvpVqyg_s9JnimqG7Binduw8eshJhaNJd9HknYe4euyig8VOM1WJSqElzDvqif63hAnbEqQrF_Fcj8AHXgnwF3K1SlFnEnuPQlFCk5eGyUdEWfj_MUwlWs3WmM0AUHh6MdWMdcOG7RWMF4CRKxAnFv98h8ZUGpLcoQKPsyCsHJd9HDKqMxFfEG4JxFskXVA-T1DSrF4wVVMxT62g"><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider hidden sm:inline">Support Console</span></div><div class="flex items-center gap-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface w-full px-margin-mobile md:px-margin"><div class="flex flex-col w-full pb-space-xl">
+<!-- Dynamic Sidebar Override Script for Tech Lead Active State -->
+<script>
+    (function() {
+      // Re-target sidebar links for Technical Lead/Admin view
+      const nav = document.querySelector('aside nav');
+      if (nav) {
+        nav.innerHTML = `
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+            <span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+            <span class="font-label-md text-label-md">All Tickets</span>
+          </a>
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg bg-[#C9A227] text-primary font-semibold transition-colors shadow-sm">
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">group</span>
+            <span class="font-label-md text-label-md">Manage Users</span>
+          </a>
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+            <span class="material-symbols-outlined text-[18px]">person_add</span>
+            <span class="font-label-md text-label-md">Onboard New User</span>
+          </a>
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+            <span class="material-symbols-outlined text-[18px]">monitoring</span>
+            <span class="font-label-md text-label-md">Analytics & SLA</span>
+          </a>
+          <a href="#" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+            <span class="material-symbols-outlined text-[18px]">category</span>
+            <span class="font-label-md text-label-md">Manage Categories</span>
+          </a>
+        `;
+      }
+      // Re-target operator profile footer in shell sidebar
+      const sidebarFooter = document.querySelector('aside .p-space-sm.bg-primary');
+      if (sidebarFooter) {
+        sidebarFooter.innerHTML = `
+          <div class="flex items-center gap-space-sm">
+            <div class="w-8 h-8 rounded-full bg-[#C9A227] text-primary flex items-center justify-center font-headline-sm text-[13px] font-bold">SJ</div>
+            <div class="flex flex-col min-w-0">
+              <span class="font-label-md text-label-md text-on-primary truncate">Sarah Jenkins</span>
+              <span class="font-caption text-caption text-on-primary-container truncate">Lead Administrator</span>
+            </div>
+          </div>
+          <div class="mt-space-xs">
+            <span class="inline-block px-space-sm py-[2px] rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-bold uppercase tracking-wider">Technical Lead / Admin</span>
+          </div>
+        `;
+      }
+    })();
+  </script>
+<!-- Metric Telemetry Ribbon -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Total Headcount</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-space-xs">42</span>
+<span class="font-caption text-caption text-on-surface-variant mt-1">Directory sync active</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Technical Queue</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-space-xs">10 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ 8 Tier 2+</span></span>
+<span class="font-caption text-caption text-on-surface-variant mt-1">2 Administrators assigned</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">engineering</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Pending Invites</span>
+<span class="font-headline-lg text-headline-lg text-secondary mt-space-xs">01</span>
+<span class="font-caption text-caption text-secondary mt-1">Awaiting SSO enrollment</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-container/40 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Active Staff Access</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-space-xs">32</span>
+<span class="font-caption text-caption text-[#2E9E5B] flex items-center gap-1 mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2E9E5B]"></span> 100% compliant MFA
+        </span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+</div>
+</div>
+<!-- Primary Workspace Canvas -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- View Header & Actions -->
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Manage Users</h1>
+<span class="font-label-sm text-label-sm px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Internal Directory</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Configure user access roles, credential provisioning, and incident resolution privileges.</p>
+</div>
+<!-- Action Anchor: Onboard New User -->
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2.5 rounded-lg bg-[#C9A227] text-primary hover:bg-[#b89320] transition-colors shadow-sm font-label-md text-label-md font-bold flex items-center gap-space-xs tracking-wide">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span class="">+ Onboard New User</span>
+</button>
+</div>
+</div>
+<!-- Interactive Filters & Query Bar -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[18px] text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-lowest pl-10 pr-space-md py-2 text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm rounded-lg focus:outline-none shadow-sm" placeholder="Search users by name, email, or department..." type="text">
+</div>
+<!-- Faceted Selectors -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Role Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest text-on-surface font-label-md text-label-md pl-3.5 pr-8 py-2 rounded-lg shadow-sm focus:outline-none cursor-pointer">
+<option selected="">All Roles (42)</option>
+<option>Staff (32)</option>
+<option>Technical Team (8)</option>
+<option>Technical Lead/Admin (2)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+<!-- Status Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest text-on-surface font-label-md text-label-md pl-3.5 pr-8 py-2 rounded-lg shadow-sm focus:outline-none cursor-pointer">
+<option selected="">All Statuses</option>
+<option>Active</option>
+<option>Pending Invite</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+<!-- Filter Reset / Density Button -->
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" title="Export Table">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant uppercase font-label-sm text-label-sm">
+<th class="py-3 px-space-lg font-semibold tracking-wider">Name</th>
+<th class="py-3 px-space-md font-semibold tracking-wider">Email</th>
+<th class="py-3 px-space-md font-semibold tracking-wider">Assigned Role</th>
+<th class="py-3 px-space-md font-semibold tracking-wider">Status</th>
+<th class="py-3 px-space-md font-semibold tracking-wider">Date Added</th>
+<th class="py-3 px-space-lg text-right font-semibold tracking-wider">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md">
+<!-- Row 1: Sarah Jenkins -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Portrait of Sarah Jenkins, Technical Lead, professional attire with navy office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPgo5cDgbPjSksxrAZ4iiSHj-Pgpm4uibAQ4uhOdycJQHdeY9fd2W1dcOo-b4exmFuoklQr8j37MZmQ63cj6Npymkgtzdn4uuIU_FqC6Hfn02NyNJeZxJMAF8jBxtkDn_71gTaGUzBcEdIGmHXbM4RSVByhkjHEa85KHgseWR7HvPq9DWRVqezYeIWOtVeQ3CZHIPbio8j-UJsi13Ubjhtjaz9yOM3dBZnKQli6jmKdjqZyRUMTbg04g">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface flex items-center gap-1.5">
+                    Sarah Jenkins
+                    <span class="font-caption text-caption text-[#C9A227] font-medium">(You)</span>
+</span>
+<span class="font-caption text-caption text-on-surface-variant">Engineering Infrastructure</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface font-mono">sarah.jenkins@company.internal</td>
+<td class="py-3.5 px-space-md">
+<!-- Technical Lead / Admin Badge: Solid Navy fill, white text -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#0B2545] text-white font-label-sm text-label-sm font-bold tracking-wide shadow-xs">
+<span class="material-symbols-outlined text-[13px] text-[#C9A227]">admin_panel_settings</span>
+                Technical Lead/Admin
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#ECFDF5] text-[#2E9E5B] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2E9E5B]"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">Jan 10, 2024</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant/40 cursor-not-allowed rounded" title="Cannot deactivate own admin session">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: David Kim -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Portrait of David Kim, male systems engineer in modern tech office, warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzRKajlXJJdcnDdXdRRiAbh3N3huCaqh7FrULuhgwdL0d8EQmxDwjISQs2NKwT44J27VO5geK91k9SKaqjGtCnlMfKB27hSsxV0KHC47m1oFlNel4RA_tBBbB1A3pw_d5DfZ32zjJ8DK6FfX7hpqsrpQCmX8OyB2YlTaL9mIphqG8qjZ9-vwpgmT_lcGDBtaxEGuMHZhYeSWHDMG-VhNeCIkFt0WrL3fbRqBOAwOi5_QsDkoKaJlgdlg">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">David Kim</span>
+<span class="font-caption text-caption text-on-surface-variant">Tier 2 Specialist</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface font-mono">david.kim@company.internal</td>
+<td class="py-3.5 px-space-md">
+<!-- Technical Team Badge: Soft azure background, blue text -->
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-[#EFF6FF] text-[#3B82F6] font-label-sm text-label-sm font-semibold tracking-wide">
+                Technical Team
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#ECFDF5] text-[#2E9E5B] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2E9E5B]"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">Mar 02, 2024</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-error rounded hover:bg-surface-container transition-colors" title="Deactivate Account">
+<span class="material-symbols-outlined text-[18px]">person_off</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Alex Rivera -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Portrait of Alex Rivera, network technician with soft studio illumination and deep blue tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoupFiZvA_XQ3JuSI1AP0FMj72EyJvDPqJPvKAyX-vzrOTJGafGZy2qss8ylsgZRygAVSHVnCmyIV2uLMXpGenE5KW2KwIoGajNO8cBz81iDygo1-lWrh0nB8DlfWMeqQIWqFxfnqQFSmQnXNWdZsucVl1XjmS9GS3OKQH59rsdhvDfEMXPw-tDH8rEXwawmBXrv48uzGEu3VmF-PKySzHMpu_lVEcDyRitDuBDWoNbaLucTkLoAhjiQ">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Alex Rivera</span>
+<span class="font-caption text-caption text-on-surface-variant">Hardware Operations</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface font-mono">alex.rivera@company.internal</td>
+<td class="py-3.5 px-space-md">
+<!-- Technical Team Badge: Soft azure background, blue text -->
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-[#EFF6FF] text-[#3B82F6] font-label-sm text-label-sm font-semibold tracking-wide">
+                Technical Team
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#ECFDF5] text-[#2E9E5B] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2E9E5B]"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">Jun 15, 2024</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-error rounded hover:bg-surface-container transition-colors" title="Deactivate Account">
+<span class="material-symbols-outlined text-[18px]">person_off</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Marcus Vance (TARGET OF MODAL / ACTIVE TRIAGE STATE) -->
+<tr class="bg-surface-container-high/30 hover:bg-surface-container-high/50 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-headline-sm text-[12px] font-bold shadow-sm flex-shrink-0">
+                  MV
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Marcus Vance</span>
+<span class="font-caption text-caption text-on-surface-variant">Cloud Infrastructure</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface font-mono">marcus.vance@company.internal</td>
+<td class="py-3.5 px-space-md">
+<!-- Technical Team Badge: Soft azure background, blue text -->
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-[#EFF6FF] text-[#3B82F6] font-label-sm text-label-sm font-semibold tracking-wide">
+                Technical Team
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col gap-1 items-start">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#FFFBEB] text-[#B45309] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#B45309]"></span>
+                  Pending Invite
+                </span>
+<div class="group relative inline-flex">
+<button class="font-caption text-caption text-[#0B2545] font-semibold hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">forward_to_inbox</span>
+                    Resend Invite
+                  </button>
+<!-- Tooltip -->
+<div class="absolute bottom-full left-0 mb-1 hidden group-hover:flex items-center px-2 py-1 rounded bg-inverse-surface text-inverse-on-surface font-caption text-[11px] whitespace-nowrap shadow-md z-20 pointer-events-none">
+                    Invite sent 2 days ago
+                  </div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">Yesterday</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container/40 rounded transition-colors" title="Deactivate Marcus Vance">
+<span class="material-symbols-outlined text-[18px]">person_off</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Emily Lawson -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<img class="w-8 h-8 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Portrait of Emily Lawson, professional woman in clean architectural office setting with natural desk light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAqZJy0qJx53_OXGL5YH9ZC0ITd6edxdE13SR8VSazXp2K6NDHx7ll-EzIEviogfzAmcVmazB0d388p_bsW2jn61fC_AjOPEgpd0dvop_Nq63OUycFG4JROm7liqlayvUX0Sb1GSVJUBPzhmeFuJ6Z37sciJ7_EZWHji0So8k08zjmNgPWB_dTe16rY9FJDxSFZ8kVKYB8AaG110zmgYlsfxvmYqnVoy-wKOnUZJ5iq7jgnY4Edjc48g">
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-semibold text-on-surface">Emily Lawson</span>
+<span class="font-caption text-caption text-on-surface-variant">Accounting &amp; Payroll</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface font-mono">emily.lawson@company.internal</td>
+<td class="py-3.5 px-space-md">
+<!-- Staff Badge: Soft slate background, gray text -->
+<span class="inline-flex items-center px-2.5 py-1 rounded bg-[#F1F5F9] text-[#64748B] font-label-sm text-label-sm font-semibold tracking-wide">
+                Staff
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#ECFDF5] text-[#2E9E5B] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2E9E5B]"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">Feb 12, 2024</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-error rounded hover:bg-surface-container transition-colors" title="Deactivate Account">
+<span class="material-symbols-outlined text-[18px]">person_off</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Operational Density Footer -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-caption text-caption text-on-surface-variant">
+<span class="">Showing 5 of 42 members enrolled across 3 active tiers</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface shadow-xs disabled:opacity-40" disabled="">Previous</button>
+<button class="px-space-sm py-1 rounded bg-[#0B2545] text-white font-semibold">1</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-xs">2</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-xs">3</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface shadow-xs">Next</button>
+</div>
+</div>
+</div>
+<!-- DEACTIVATE CONFIRMATION MODAL OVERLAY -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-[#001026]/40 backdrop-blur-sm transition-opacity" id="deactivateModal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden transform transition-all">
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Modal Visual Icon Header -->
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-full bg-error-container/40 flex-shrink-0 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">person_off</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Deactivate User?</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 font-mono">marcus.vance@company.internal</span>
+</div>
+</div>
+<!-- Explanatory Context Copy -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-semibold">Marcus Vance</strong> will no longer be able to log in to the IT Support System. Their ticket history and audit logs will be permanently preserved.
+        </p>
+<!-- Access Revocation Preview Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1 text-on-surface-variant font-caption text-caption">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-[#C9A227]">vpn_key</span>
+<span class="">Revokes 2 SSO tokens and API session cookies</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[15px] text-[#3B82F6]">history_edu</span>
+<span class="">All assigned incident notes remain attributed to this profile</span>
+</div>
+</div>
+</div>
+<!-- Modal Action Buttons Bar -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md font-semibold shadow-xs" onclick="document.getElementById('deactivateModal').classList.add('hidden')" type="button">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-[#E74C3C] text-white hover:bg-[#c0392b] transition-colors font-label-md text-label-md font-bold shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+          Deactivate User
+        </button>
+</div>
+</div>
+</div>
+</div></main></div>
+
+
+
+</body></html>

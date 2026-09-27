@@ -1,0 +1,514 @@
+<!DOCTYPE html><html lang="en" style="width: 1280px; height: 1298px; overflow: hidden; position: relative;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#314769","on-tertiary-container":"#4489fd","secondary-container":"#fed255","tertiary-container":"#002353","on-primary-fixed":"#001c3b","primary-fixed":"#d5e3ff","primary":"#001026","surface-tint":"#495f82","error":"#ba1a1a","outline":"#74777f","background":"#f8f9ff","error-container":"#ffdad6","surface-bright":"#f8f9ff","on-tertiary-fixed-variant":"#004395","surface-dim":"#cedbf0","tertiary-fixed-dim":"#adc6ff","inverse-primary":"#b1c7f0","on-surface-variant":"#44474e","primary-container":"#0b2545","surface":"#f8f9ff","secondary-fixed-dim":"#ecc246","tertiary-fixed":"#d8e2ff","on-secondary-container":"#735a00","on-error-container":"#93000a","tertiary":"#000f2b","on-error":"#ffffff","on-primary-container":"#778db2","on-tertiary":"#ffffff","on-secondary-fixed":"#241a00","surface-container-lowest":"#ffffff","surface-variant":"#d7e3f9","outline-variant":"#c4c6cf","on-surface":"#101c2c","surface-container-low":"#eff4ff","on-tertiary-fixed":"#001a42","secondary":"#755b00","inverse-surface":"#253141","on-primary":"#ffffff","on-background":"#101c2c","surface-container-highest":"#d7e3f9","inverse-on-surface":"#eaf1ff","primary-fixed-dim":"#b1c7f0","surface-container-high":"#dce9ff","secondary-fixed":"#ffe08e","on-secondary-fixed-variant":"#584400","on-secondary":"#ffffff","surface-container":"#e6eeff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2rem","space-md":"1rem",margin:"1.5rem","space-xs":"0.25rem","gutter-lg":"1.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-sm":"0.5rem",gutter:"1rem"},fontFamily:{"body-md":["Hanken Grotesk"],"headline-xl-mobile":["DM Sans"],"headline-xl":["DM Sans"],"body-lg":["Hanken Grotesk"],"body-sm":["Hanken Grotesk"],"headline-lg":["DM Sans"],caption:["Hanken Grotesk"],"label-md":["Hanken Grotesk"],"headline-sm":["DM Sans"],"headline-md":["DM Sans"],"label-sm":["Hanken Grotesk"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-xl-mobile":["28px",{lineHeight:"36px",fontWeight:"700"}],"headline-xl":["36px",{lineHeight:"44px",fontWeight:"700"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["26px",{lineHeight:"34px",fontWeight:"600"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],"label-md":["13px",{lineHeight:"16px",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-[220px] bg-primary-container text-on-primary z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-primary"><span class="material-symbols-outlined text-secondary-fixed text-[20px]">shield</span><span class="font-headline-sm text-headline-sm text-on-primary tracking-wide">E310 ITS Support</span></div><nav class="flex flex-col gap-space-xs p-space-sm" data-active-classes="bg-tertiary-container text-on-tertiary-container font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm transition-colors bg-tertiary-container text-on-tertiary-container font-semibold rounded-lg" data-path="technical-assigned-tickets" href="#"><span class="material-symbols-outlined text-[18px]">inbox</span><span class="font-label-md text-label-md">My Assigned Tickets</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-primary-container hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors" data-path="technical-all-tickets" href="#"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span><span class="font-label-md text-label-md">All Tickets</span><span class="ml-auto font-label-sm text-label-sm px-space-xs py-[2px] rounded bg-tertiary text-on-primary-container">RO</span></a></nav></div><div class="p-space-sm bg-primary flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-surface-tint flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-primary truncate">Alex Vance</span><span class="font-caption text-caption text-on-primary-container truncate">Tier 2 Support</span></div></div><div class="mt-space-xs"><span class="inline-block px-space-sm py-space-xs rounded font-label-sm text-label-sm bg-surface-container-low text-on-tertiary-container border border-outline-variant uppercase">Technical Team</span></div></div></aside><div class="pl-[220px]"><header class="fixed top-0 left-[220px] right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-margin-mobile md:px-margin"><div class="flex items-center gap-space-md"><img alt="E310 ITS Support" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XksYQkoCTLGq84ll4DxW6h6h1fLTXaY1SYSb59gVyaOIg8kXrU7qw-rd9AIVcrIKB0z4Db92kiHg1tUBVgiMMwQa4X-fz8kqMpqTxkDTO3mch3ROiBBfSaRNVZYxJObFBDQD70WbkO2N1Q1pyEO4rx_V8syE361V5XFZNQhrIK-AzUtrUJGi5qC2nIarer6c8XNMYCdsTAkkWAwjxvip_T2uzXdJPvm4LCHDXdNn3-_cKe66GcKX9Zy6o"><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider hidden sm:inline">Support Console</span></div><div class="flex items-center gap-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface w-full px-margin-mobile md:px-margin"><div class="flex flex-col w-full">
+<!-- Notification Banner / Micro Context -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-lg">
+<div>
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          CONSOLE TIER 2
+        </span>
+<span class="text-outline-variant font-label-sm text-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Operational Queue</span>
+</div>
+<div class="flex items-baseline gap-space-md">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight" id="view-title">My Assigned Tickets</h1>
+<span class="font-body-md text-body-md text-on-surface-variant" id="ticket-count-indicator">3 active assignments awaiting resolution</span>
+</div>
+</div>
+<!-- Quick Search & Alert Strip -->
+<div class="flex items-center gap-space-md">
+<div class="relative w-72">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-lg shadow-sm focus:outline-none focus:bg-surface-container-lowest transition-all" id="ticket-search" placeholder="Search ticket ID, user, hardware..." type="text">
+</div>
+<button class="relative w-10 h-10 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+<div class="hidden xl:flex items-center gap-2 pl-2 border-l border-surface-container-high text-on-surface-variant">
+
+
+</div>
+</div>
+</div>
+<!-- Operational Metric Tiles -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Queue Capacity</span>
+<span class="font-headline-lg text-headline-lg text-primary mt-1">3 <span class="font-body-sm text-body-sm text-on-surface-variant">/ 5 max</span></span>
+<span class="font-caption text-caption text-on-tertiary-container mt-0.5 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+          2 slots available for intake
+        </span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">confirmation_number</span>
+</div>
+</div>
+
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Resolved Today</span>
+<span class="font-headline-lg text-headline-lg text-primary mt-1">4 <span class="font-body-sm text-body-sm text-on-surface-variant">tickets</span></span>
+<span class="font-caption text-caption text-on-surface-variant mt-0.5">David Kim • Tier 2 Support</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+</div>
+</div>
+</div>
+<!-- Primary Workspace Layout: Split Work List and Interactive Drawer -->
+<div class="flex gap-space-lg items-start relative w-full mb-space-xl">
+<!-- Table Container -->
+<div class="flex-1 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-300">
+<!-- Filter and View Controls -->
+<div class="flex items-center justify-between px-space-lg pt-space-md pb-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-lg" id="filter-tabs">
+<button class="filter-btn active pb-3 font-label-md text-label-md text-primary relative" data-filter="all">
+            All (3)
+            <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary-container"></span>
+</button>
+<button class="filter-btn pb-3 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors relative" data-filter="in-progress">
+            In Progress (3)
+            <span class="tab-indicator hidden absolute bottom-0 left-0 right-0 h-0.5 bg-secondary-container"></span>
+</button>
+<button class="filter-btn pb-3 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors relative flex items-center gap-1.5" data-filter="urgent">
+            Urgent (1)
+            <span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="tab-indicator hidden absolute bottom-0 left-0 right-0 h-0.5 bg-secondary-container"></span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="">Reassignment locked (Tech permissions)</span>
+</div>
+</div>
+<!-- Data Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left" id="tickets-table">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-space-lg">Ticket ID</th>
+<th class="py-3 px-space-md">Staff Member</th>
+<th class="py-3 px-space-md">Category</th>
+<th class="py-3 px-space-md">Priority</th>
+<th class="py-3 px-space-md">Status</th>
+<th class="py-3 px-space-md">Age</th>
+<th class="py-3 px-space-lg text-right">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface divide-y divide-surface-container-low">
+<!-- Row 1: #1049 (Urgent) -->
+<tr class="ticket-row hover:bg-surface-container-low/60 transition-colors group cursor-pointer" data-priority="urgent" data-ticket="1049">
+<td class="py-3.5 px-space-lg font-label-md text-label-md text-primary font-semibold">
+                #1049
+              </td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-label-sm">
+                    MV
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary leading-snug">Marcus Vance</span>
+<span class="font-caption text-caption text-on-surface-variant">Infrastructure</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-outline">lan</span>
+                  Network
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-2 font-label-sm text-label-sm text-error font-semibold uppercase">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+                  Urgent
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-block px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed uppercase">
+                  In Progress
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">
+                45m
+              </td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="inline-flex items-center gap-1 text-primary-container hover:text-on-tertiary-container font-label-md text-label-md group-hover:translate-x-0.5 transition-all" onclick="openDrawer('1049')">
+                  Open Drawer
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: #1045 (High - Focused/Active) -->
+<tr class="ticket-row bg-surface-container-high/40 hover:bg-surface-container-high/60 transition-colors group cursor-pointer" data-priority="high" data-ticket="1045">
+<td class="py-3.5 px-space-lg font-label-md text-label-md text-primary font-semibold">
+<span class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  #1045
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-sm text-label-sm">
+                    EL
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary leading-snug">Emily Lawson</span>
+<span class="font-caption text-caption text-on-surface-variant">Finance &amp; Ops</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-outline">devices</span>
+                  Hardware
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-2 font-label-sm text-label-sm text-secondary font-semibold uppercase">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  High
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-block px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed uppercase">
+                  In Progress
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">
+                3h
+              </td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="inline-flex items-center gap-1 text-primary-container font-semibold text-on-tertiary-container font-label-md text-label-md group-hover:translate-x-0.5 transition-all" onclick="openDrawer('1045')">
+                  Open Drawer
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: #1041 (Medium) -->
+<tr class="ticket-row hover:bg-surface-container-low/60 transition-colors group cursor-pointer" data-priority="medium" data-ticket="1041">
+<td class="py-3.5 px-space-lg font-label-md text-label-md text-primary font-semibold">
+                #1041
+              </td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-sm text-label-sm">
+                    JL
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary leading-snug">Jordan Lee</span>
+<span class="font-caption text-caption text-on-surface-variant">Engineering</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-outline">terminal</span>
+                  Software
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-2 font-label-sm text-label-sm text-on-tertiary-container font-semibold uppercase">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+                  Medium
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-block px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed uppercase">
+                  In Progress
+                </span>
+</td>
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-on-surface-variant">
+                1d
+              </td>
+<td class="py-3.5 px-space-lg text-right">
+<button class="inline-flex items-center gap-1 text-primary-container hover:text-on-tertiary-container font-label-md text-label-md group-hover:translate-x-0.5 transition-all" onclick="openDrawer('1041')">
+                  Open Drawer
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Quick Resolution Context Footer -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between text-on-surface-variant font-caption text-caption gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">verified_user</span>
+<span class="">Logged in as <strong>David Kim</strong>. Authorized for direct resolution and status commits.</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="">SLA Adherence: <strong class="text-primary font-semibold">98.4%</strong></span>
+<span class="text-outline-variant">•</span>
+<span class="">Shift ends in <strong>4h 12m</strong></span>
+</div>
+</div>
+</div>
+<!-- TICKET DETAIL DRAWER (460px Slide-over panel) -->
+<div class="w-[460px] shrink-0 bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col relative transition-all duration-300" id="ticket-drawer">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md text-primary tracking-tight" id="drawer-ticket-id">#1045</span>
+<span class="inline-block px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed uppercase font-semibold">
+            In Progress
+          </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm text-secondary bg-surface-container-high font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            High
+          </span>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-colors" onclick="closeDrawer()" title="Close Panel">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Content Scrollable Body -->
+<div class="flex flex-col gap-space-md py-space-sm overflow-y-auto max-h-[calc(100vh-270px)] pr-1"><!-- Reporter Metadata Block -->
+<div class="bg-surface-container-low rounded-lg p-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-md text-label-md">
+              EL
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Emily Lawson</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Finance &amp; Operations • Floor 3, Room 302</span>
+<span class="font-caption text-caption text-outline mt-0.5">Reported 3 hours ago via Staff Portal</span>
+</div>
+</div>
+</div>
+<!-- Status Management Section -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm border border-surface-container-high"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">sync_alt</span>Ticket Status</span><div class="flex items-center gap-1.5"><span class="font-caption text-caption text-on-surface-variant">Current Status:</span><span class="inline-block px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed uppercase font-semibold" id="status-badge-current">In Progress</span></div></div><div class="mt-1 flex flex-col gap-2"><div class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-md p-1 flex flex-col divide-y divide-surface-container-low"><div class="p-2 flex items-center justify-between text-outline opacity-75 cursor-not-allowed"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span><span class="font-label-md text-label-md">Open</span></div><span class="font-caption text-caption">Requires new ticket initialization</span></div><div class="p-2 flex items-center justify-between text-outline opacity-75 cursor-not-allowed"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span><span class="font-label-md text-label-md">Assigned</span></div><span class="font-caption text-caption">Previous stage</span></div><div class="p-2 rounded bg-secondary-fixed text-on-secondary-fixed flex items-center justify-between font-semibold"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">check_circle</span><span class="font-label-md text-label-md">In Progress</span></div><span class="font-caption text-caption uppercase tracking-wider font-semibold">Active selection</span></div><div class="p-2 rounded bg-surface-container-low/60 hover:bg-surface-container-high/40 text-primary border border-surface-tint/40 flex items-center justify-between cursor-pointer transition-colors"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-on-tertiary-container">arrow_circle_right</span><span class="font-label-md text-label-md font-semibold">Resolved</span></div><span class="font-caption text-caption text-on-tertiary-container font-semibold">Valid forward transition</span></div><div class="p-2 flex items-center justify-between text-outline opacity-75 cursor-not-allowed"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">block</span><span class="font-label-md text-label-md">Closed</span></div><span class="font-caption text-caption">Requires resolution first</span></div><div class="p-2 flex items-center justify-between text-outline opacity-75 cursor-not-allowed"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">block</span><span class="font-label-md text-label-md">Reopened</span></div><span class="font-caption text-caption">Only from Resolved</span></div></div><div class="flex items-center justify-between gap-space-sm mt-1"><button class="w-full px-space-md py-2.5 rounded-lg bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm transition-all" onclick="document.getElementById('status-confirm-modal').classList.remove('hidden')" type="button"><span class="material-symbols-outlined text-[18px]">published_with_changes</span>Update Status</button></div></div><div class="flex items-center gap-1.5 text-outline text-caption font-caption mt-0.5"><span class="material-symbols-outlined text-[14px]">lock</span><span class="">Reassignment locked (Tech permissions)</span></div></div>
+<!-- Hardware & Category Specifications -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Category</span>
+<span class="font-label-md text-label-md text-primary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">devices</span>
+              Hardware
+            </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Target Asset</span>
+<span class="font-label-md text-label-md text-primary mt-1 truncate" title="MacBook Pro 16&quot; (M2 Pro, 32GB)">
+              MacBook Pro 16" (M2)
+            </span>
+</div>
+</div>
+<!-- Problem Description -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Reported Incident</span>
+<p class="font-body-md text-body-md text-on-surface bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+            Keys 'E', 'R', and Spacebar intermittently fail to register or repeat characters twice when typing financial reports during quarterly close.
+          </p>
+</div>
+<!-- Attached Media / Evidence -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Diagnostic Photo</span>
+<div class="relative rounded-lg overflow-hidden group shadow-sm bg-surface-container-high h-32 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Macro close-up shot of a modern dark gray MacBook Pro keyboard showing the E, R and spacebar keys under clear technical diagnostic workbench lighting with a soft gradient shadow and crisp keycaps in high detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGyJegtiP4CwywYtJWeahEgss2D5N2u1gLvdIcNRV9x1EBDqRcRhqghM-vz91GnZQbyYM-XTYhz7XVAZ6cN4I22i308ErqsePkMQhfwe5tMwL7U_OCRa04qM2fY_ygenEVJlV1NFIcteBvWnTkiaVdB5YeOJr7L5LILCH0-16cE9uywE9HGEfq3Bz0_jA7MWAA2KslqnjkcFu3dGZgoDyIwyjm6_-_y5rrVRdWPBXU9fTBBVPGEDAVwg">
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-space-sm">
+<button class="px-3 py-1.5 rounded-lg bg-surface text-primary font-label-sm text-label-sm shadow-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+                Inspect Hardware
+              </button>
+</div>
+</div>
+</div>
+<!-- Activity / Lifecycle History Timeline -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">timeline</span>
+    Lifecycle &amp; Status History
+  </span>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm shadow-sm flex flex-col divide-y divide-surface-container-low text-body-sm font-body-sm"><div class="flex items-start gap-2 pt-1 pb-2"><span class="material-symbols-outlined text-[16px] text-outline mt-0.5">add_circle</span><div class="flex flex-col"><span class="text-primary font-semibold">Ticket created by Emmanuel (Staff)</span><span class="text-caption font-caption text-on-surface-variant">Yesterday, 10:14 AM</span></div></div><div class="flex items-start gap-2 py-2"><span class="material-symbols-outlined text-[16px] text-on-tertiary-container mt-0.5">assignment_ind</span><div class="flex flex-col"><span class="text-primary font-semibold">Ticket assigned to David Kim</span><span class="text-caption font-caption text-on-surface-variant">Yesterday, 11:30 AM</span></div></div><div class="flex items-start gap-2 pt-2"><span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">published_with_changes</span><div class="flex flex-col"><span class="text-primary font-semibold">David Kim changed status from Assigned to In Progress</span><span class="text-caption font-caption text-on-surface-variant">Today, 09:15 AM</span></div></div></div>
+</div>
+<!-- Resolution Working Notes (Full Edit Privileges) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Internal Resolution Log</span>
+<span class="font-caption text-caption text-on-tertiary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> Auto-saved
+  </span>
+</div>
+<textarea class="w-full p-space-sm rounded-lg bg-surface text-on-surface font-body-sm text-body-sm shadow-inner focus:outline-none focus:bg-surface-container-lowest transition-all" id="resolution-notes-input" placeholder="Document diagnostic procedures and repairs performed..." rows="3">Cleaned switch contacts and ran Apple Hardware Diagnostics. Replacing top-case assembly under AppleCare warranty today.</textarea>
+</div></div>
+<!-- Action Footer with Technician Capabilities -->
+<div class="pt-space-md mt-auto flex flex-col gap-space-sm">
+<div class="flex gap-space-sm">
+<button class="flex-1 px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-sm transition-all" onclick="addResolutionNote()" type="button">
+<span class="material-symbols-outlined text-[18px]">add_comment</span>
+            Add Resolution Note
+          </button>
+<button class="flex-1 px-space-md py-2.5 rounded-lg bg-on-tertiary-container hover:bg-on-tertiary-container/90 text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs shadow-md transition-all active:scale-[0.98]" onclick="resolveTicket()" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+            Mark Resolved
+          </button>
+</div>
+<div class="text-center">
+<span class="font-caption text-caption text-outline-variant">Direct technician resolution action • Immediate staff notification dispatched</span>
+</div>
+</div>
+<!-- Confirmation Modal for updating status -->
+<div class="hidden absolute inset-0 z-50 bg-primary/40 backdrop-blur-xl rounded-xl flex items-center justify-center p-space-md" id="status-confirm-modal">
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm border border-surface-container-high"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">sync_alt</span>Ticket Status</span><div class="flex items-center gap-1.5"><span class="font-caption text-caption text-on-surface-variant">Current Status:</span><span class="inline-block px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed uppercase font-semibold" id="status-badge-current">In Progress</span></div></div><div class="mt-1 flex flex-col gap-2"><div class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-md p-1 flex flex-col divide-y divide-surface-container-low"><div class="p-2 flex items-center justify-between text-outline opacity-75 cursor-not-allowed"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span><span class="font-label-md text-label-md">Open</span></div><span class="font-caption text-caption">Requires new ticket initialization</span></div><div class="p-2 flex items-center justify-between text-outline opacity-75 cursor-not-allowed"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span><span class="font-label-md text-label-md">Assigned</span></div><span class="font-caption text-caption">Previous stage</span></div><div class="p-2 rounded bg-secondary-fixed text-on-secondary-fixed flex items-center justify-between font-semibold"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">check_circle</span><span class="font-label-md text-label-md">In Progress</span></div><span class="font-caption text-caption uppercase tracking-wider font-semibold">Active selection</span></div><div class="p-2 rounded bg-surface-container-low/60 hover:bg-surface-container-high/40 text-primary border border-surface-tint/40 flex items-center justify-between cursor-pointer transition-colors"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-on-tertiary-container">arrow_circle_right</span><span class="font-label-md text-label-md font-semibold">Resolved</span></div><span class="font-caption text-caption text-on-tertiary-container font-semibold">Valid forward transition</span></div><div class="p-2 flex items-center justify-between text-outline opacity-75 cursor-not-allowed"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">block</span><span class="font-label-md text-label-md">Closed</span></div><span class="font-caption text-caption">Requires resolution first</span></div><div class="p-2 flex items-center justify-between text-outline opacity-75 cursor-not-allowed"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">block</span><span class="font-label-md text-label-md">Reopened</span></div><span class="font-caption text-caption">Only from Resolved</span></div></div><div class="flex items-center justify-between gap-space-sm mt-1"><button class="w-full px-space-md py-2.5 rounded-lg bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm transition-all" onclick="document.getElementById('status-confirm-modal').classList.remove('hidden')" type="button"><span class="material-symbols-outlined text-[18px]">published_with_changes</span>Update Status</button></div></div><div class="flex items-center gap-1.5 text-outline text-caption font-caption mt-0.5"><span class="material-symbols-outlined text-[14px]">lock</span><span class="">Reassignment locked (Tech permissions)</span></div></div>
+</div></div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toast">
+<div class="bg-primary text-on-primary px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-body-md text-body-md" id="toast-message">Action processed successfully.</span>
+</div>
+</div>
+</div>
+<script>
+  // Simple Drawer State & Interaction
+  const ticketData = {
+    '1045': {
+      id: '#1045',
+      user: 'Emily Lawson',
+      dept: 'Finance & Ops • Floor 3, Room 302',
+      initials: 'EL',
+      category: 'Hardware',
+      device: 'MacBook Pro 16" (M2)',
+      desc: "Keys 'E', 'R', and Spacebar intermittently fail to register or repeat characters twice when typing financial reports during quarterly close.",
+      notes: "Cleaned switch contacts and ran Apple Hardware Diagnostics. Replacing top-case assembly under AppleCare warranty today.",
+      priority: 'High',
+      priorityColor: 'text-secondary'
+    },
+    '1049': {
+      id: '#1049',
+      user: 'Marcus Vance',
+      dept: 'Infrastructure • Server Room B',
+      initials: 'MV',
+      category: 'Network',
+      device: 'Core Switch VLAN-40',
+      desc: "Core switch VLAN routing dropped in Server Room B. Core links failing over intermittently.",
+      notes: "Inspecting SFP+ transceivers on trunk 0/1. Spanning tree topology recalculating.",
+      priority: 'Urgent',
+      priorityColor: 'text-error'
+    },
+    '1041': {
+      id: '#1041',
+      user: 'Jordan Lee',
+      dept: 'Engineering • Floor 2, Pod D',
+      initials: 'JL',
+      category: 'Software',
+      device: 'MacBook Pro 14" (M3 Max)',
+      desc: "Docker daemon crashing on macOS Sequoia update. Kernel extension panic on container spawn.",
+      notes: "Resetting Docker engine socket permissions and upgrading Virtualization framework driver.",
+      priority: 'Medium',
+      priorityColor: 'text-on-tertiary-container'
+    }
+  };
+
+  function openDrawer(id) {
+    const drawer = document.getElementById('ticket-drawer');
+    const data = ticketData[id];
+    if (!data) return;
+
+    document.getElementById('drawer-ticket-id').innerText = data.id;
+    document.getElementById('resolution-notes-input').value = data.notes;
+    
+    // Highlight table row
+    document.querySelectorAll('.ticket-row').forEach(row => {
+      if (row.getAttribute('data-ticket') === id) {
+        row.classList.add('bg-surface-container-high/40');
+      } else {
+        row.classList.remove('bg-surface-container-high/40');
+      }
+    });
+
+    drawer.classList.remove('hidden');
+    showToast('Viewing ticket details for ' + data.id);
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById('ticket-drawer');
+    drawer.classList.add('hidden');
+  }
+
+  function resolveTicket() {
+    showToast('Ticket marked as RESOLVED and archived to operational history.');
+    const activeId = document.getElementById('drawer-ticket-id').innerText.replace('#', '');
+    const targetRow = document.querySelector(`.ticket-row[data-ticket="${activeId}"]`);
+    if (targetRow) {
+      targetRow.style.transition = 'all 0.4s ease';
+      targetRow.style.opacity = '0.3';
+      targetRow.style.pointerEvents = 'none';
+      setTimeout(() => {
+        closeDrawer();
+      }, 700);
+    }
+  }
+
+  function addResolutionNote() {
+    const notes = document.getElementById('resolution-notes-input').value;
+    if (notes.trim()) {
+      showToast('Resolution note timestamped and logged.');
+    } else {
+      showToast('Please type a note before saving.');
+    }
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    toastMsg.innerText = msg;
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2800);
+  }
+
+  // Filter tabs handling
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('text-primary');
+        b.classList.add('text-on-surface-variant');
+        const ind = b.querySelector('span:not(.rounded-full)');
+        if (ind) ind.classList.add('hidden');
+      });
+
+      btn.classList.add('text-primary');
+      btn.classList.remove('text-on-surface-variant');
+      const activeInd = btn.querySelector('span:not(.rounded-full)');
+      if (activeInd) activeInd.classList.remove('hidden');
+
+      const filterType = btn.getAttribute('data-filter');
+      const rows = document.querySelectorAll('.ticket-row');
+      rows.forEach(row => {
+        if (filterType === 'all') {
+          row.style.display = '';
+        } else if (filterType === 'urgent') {
+          row.style.display = row.getAttribute('data-priority') === 'urgent' ? '' : 'none';
+        } else {
+          row.style.display = '';
+        }
+      });
+    });
+  });
+
+  // Search input live query
+  document.getElementById('ticket-search').addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase();
+    document.querySelectorAll('.ticket-row').forEach(row => {
+      const text = row.innerText.toLowerCase();
+      row.style.display = text.includes(term) ? '' : 'none';
+    });
+  });
+</script></main></div>
+
+
+</body></html>
