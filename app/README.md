@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E310 ITS Support
 
-## Getting Started
+Internal IT support / ticketing system for E310. Staff can report issues, and the tech team can track and resolve them.
 
-First, run the development server:
+Still very much in progress, but here's where things stand:
 
-```bash
+## What's working so far
+- Login page (standard one, plus the first-time login + password reset flow for new users)
+- Staff dashboard - shows "My Tickets" with status
+- Report an Issue form - pick category, priority, describe the issue
+- When you submit an issue it actually shows up on the dashboard now (using browser storage for now, not the real database yet)
+- Database schema is set up in Prisma/Supabase - Users, Tickets, Categories, Activity Log, Equipment tables all defined
+
+## What's not built yet
+- Technical Team dashboard (the "My Assigned Tickets" / "All Tickets" view)
+- Manage Users / Onboarding page for admins
+- Analytics page
+- Real login/authentication - right now clicking sign in just takes you to the dashboard, there's no actual auth check
+- Connecting everything to the real database (still using localStorage as a placeholder)
+
+## Roles
+There are 3 roles - Staff, Technical Team, and Technical Lead/Admin. Full breakdown of what each role can see/do is in the PRD, ask me if you need it.
+
+## Stack
+- Next.js + Tailwind for frontend
+- Supabase (Postgres) for the database
+- Prisma as the ORM
+
+## How to run it
+cd app
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then go to localhost:3000/login
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You'll need the `.env` file with the database keys - message me for those, I didn't push them to the repo for obvious reasons.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Folder structure
+- `app/` - the actual Next.js app, this is where the code lives
+- `design-reference/` - the Stitch designs I made, just for reference, not actual code
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Will keep updating this as I go. Let me know if anything doesn't run for you.
