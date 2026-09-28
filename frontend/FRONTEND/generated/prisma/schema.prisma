@@ -1,0 +1,87 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Role {
+  STAFF
+  TECHNICAL_TEAM
+  TECHNICAL_LEAD_ADMIN
+}
+
+enum TicketStatus {
+  OPEN
+  ASSIGNED
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+  REOPENED
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  password     String
+  role         Role     @default(STAFF)
+  isFirstLogin Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  ticketsCreated  Ticket[]      @relation("StaffTickets")
+  ticketsAssigned Ticket[]      @relation("TechnicianTickets")
+  activityLogs    ActivityLog[]
+}
+
+model Ticket {
+  id             String       @id @default(uuid())
+  staff          User         @relation("StaffTickets", fields: [staffId], references: [id])
+  staffId        String
+  technician     User?        @relation("TechnicianTickets", fields: [technicianId], references: [id])
+  technicianId   String?
+  category       Category     @relation(fields: [categoryId], references: [id])
+  categoryId     String
+  description    String
+  priority       Priority
+  status         TicketStatus @default(OPEN)
+  deviceLocation String?
+  createdAt      DateTime     @default(now())
+  resolvedAt     DateTime?
+
+  activityLogs ActivityLog[]
+}
+
+model Category {
+  id      String   @id @default(uuid())
+  name    String   @unique
+  tickets Ticket[]
+}
+
+model ActivityLog {
+  id        String   @id @default(uuid())
+  ticket    Ticket   @relation(fields: [ticketId], references: [id])
+  ticketId  String
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  action    String
+  timestamp DateTime @default(now())
+}
+
+model Equipment {
+  id       String @id @default(uuid())
+  assetTag String @unique
+  type     String
+  location String
+}
