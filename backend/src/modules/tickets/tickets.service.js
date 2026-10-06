@@ -64,10 +64,13 @@ class TicketsService {
     // Role-based visibility
     if (user.role === 'STAFF') {
       where.staffId = user.id;
-    } else if (technicianId) {
-      where.technicianId = technicianId;
+    } else if (user.role === 'TECHNICAL_TEAM') {
+      where.OR = [
+        { technicianId: user.id },
+        { technicianId: null },
+      ];
     }
-
+    // TECHNICAL_LEAD_ADMIN sees everything — no filter applied
     if (status) {
       where.status = status.toUpperCase();
     }
@@ -81,10 +84,18 @@ class TicketsService {
     }
 
     if (search) {
-      where.OR = [
+      const searchConditions = [
         { description: { contains: search, mode: 'insensitive' } },
         { deviceLocation: { contains: search, mode: 'insensitive' } },
       ];
+
+      if (where.OR) {
+        // Combine with existing role-based OR (e.g. TECHNICAL_TEAM) using AND
+        where.AND = [{ OR: where.OR }, { OR: searchConditions }];
+        delete where.OR;
+      } else {
+        where.OR = searchConditions;
+      }
     }
 
     const tickets = await prisma.ticket.findMany({

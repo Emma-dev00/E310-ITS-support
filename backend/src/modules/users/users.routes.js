@@ -4,6 +4,8 @@ const { authenticate, requireRole } = require('../../middlewares/auth.middleware
 
 const router = express.Router();
 
+router.use(authenticate);
+
 // Technicians can be listed by technical team and admin
 router.get(
   '/technicians',
@@ -39,6 +41,12 @@ router.patch(
   authenticate,
   requireRole('TECHNICAL_LEAD_ADMIN'),
   usersController.updateUserRole
+);
+router.patch(
+  '/:id/reset-password',
+  authenticate,
+  requireRole('TECHNICAL_LEAD_ADMIN'),
+  usersController.resetUserPassword
 );
 
 router.delete(

@@ -121,7 +121,36 @@ class UsersService {
 
     return newUser;
   }
+  async resetUserPassword(id) {
+    const user = await prisma.user.findUnique({ where: { id } });
 
+    if (!user) {
+      const error = new Error('User not found');
+      error.status = 404;
+      throw error;
+    }
+
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%';
+    let tempPassword = '';
+    for (let i = 0; i < 12; i++) {
+      tempPassword += chars[Math.floor(Math.random() * chars.length)];
+    }
+
+    const hashedPassword = await bcrypt.hash(tempPassword, 10);
+
+    await prisma.user.update({
+      where: { id },
+      data: {
+        password: hashedPassword,
+        isFirstLogin: true,
+      },
+    });
+
+    return {
+      email: user.email,
+      temporaryPassword: tempPassword,
+    };
+  }
   async updateUserRole(id, role) {
     const validRoles = ['STAFF', 'TECHNICAL_TEAM', 'TECHNICAL_LEAD_ADMIN'];
     if (!validRoles.includes(role)) {
