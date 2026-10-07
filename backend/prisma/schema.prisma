@@ -36,6 +36,8 @@ model User {
   password     String
   role         Role     @default(STAFF)
   isFirstLogin Boolean  @default(true)
+  resetToken   String?  @map("reset_token")
+  resetTokenExpires BigInt? @map("reset_token_expires")
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 

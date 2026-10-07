@@ -27,12 +27,38 @@ class AuthController {
     }
   }
 
-  async resetPassword(req, res, next) {
+  async forgotPassword(req, res, next) {
     try {
-      const { currentPassword, newPassword } = req.body;
-      const result = await authService.resetPassword(req.user.id, currentPassword, newPassword);
+      const { email } = req.body;
+      const result = await authService.forgotPassword(email);
       return res.status(200).json({
         success: true,
+        message: result.message,
+        data: result,
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  async resetPassword(req, res, next) {
+    try {
+      const { token, newPassword, password, currentPassword } = req.body;
+      const targetPassword = newPassword || password;
+      let result;
+      if (token) {
+        result = await authService.resetPasswordWithToken(token, targetPassword);
+      } else {
+        if (!req.user) {
+          const error = new Error('Authentication required or reset token missing');
+          error.status = 401;
+          throw error;
+        }
+        result = await authService.resetPassword(req.user.id, currentPassword, targetPassword);
+      }
+      return res.status(200).json({
+        success: true,
+        message: result.message,
         data: result,
       });
     } catch (error) {

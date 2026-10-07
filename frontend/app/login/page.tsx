@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -107,9 +108,9 @@ export default function LoginPage() {
               <label htmlFor="password" className="text-sm font-semibold text-[#0B2545]">
                 Password
               </label>
-              <a href="#" className="text-xs text-[#C9A227] hover:underline">
+              <Link href="/forgot-password" className="text-xs text-[#C9A227] hover:underline">
                 Forgot password?
-              </a>
+              </Link>
             </div>
             <div className="relative flex items-center">
               <input
