@@ -280,11 +280,10 @@ export default function AdminAnalyticsPage() {
                                                     {tech.email}
                                                 </td>
                                                 <td className="px-4 py-3 text-right">
-                                                    <span className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-bold ${
-                                                        tech.activeTicketsCount > 0
-                                                            ? "bg-[#C9A227]/20 text-[#0B2545]"
-                                                            : "bg-gray-100 text-gray-600"
-                                                    }`}>
+                                                    <span className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-bold ${tech.activeTicketsCount > 0
+                                                        ? "bg-[#C9A227]/20 text-[#0B2545]"
+                                                        : "bg-gray-100 text-gray-600"
+                                                        }`}>
                                                         {tech.activeTicketsCount} active
                                                     </span>
                                                 </td>
