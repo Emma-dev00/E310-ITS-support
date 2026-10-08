@@ -18,7 +18,7 @@ const allowedOrigins = [
   env.FRONTEND_URL,
   'http://localhost:3000',
   'http://127.0.0.1:3000',
-  'https://e310-its-support.onrender.com',
+  'https://e310-itssupport.onrender.com',
 ].filter(Boolean).map((url) => url.replace(/\/$/, ''));
 
 const corsOptions = {
