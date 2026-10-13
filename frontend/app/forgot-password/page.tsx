@@ -24,7 +24,8 @@ export default function ForgotPasswordPage() {
     setIsLoading(true);
 
     try {
-      const endpoint = "https://e310-its-support.onrender.com/api/auth/forgot-password";
+      const baseUrl = (process.env.NEXT_PUBLIC_API_URL || "https://e310-its-support.onrender.com").replace(/\/$/, "");
+      const endpoint = baseUrl.endsWith("/api") ? `${baseUrl}/auth/forgot-password` : `${baseUrl}/api/auth/forgot-password`;
 
       const res = await fetch(endpoint, {
         method: "POST",

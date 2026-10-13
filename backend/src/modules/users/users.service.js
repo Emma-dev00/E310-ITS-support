@@ -1,5 +1,6 @@
 const bcrypt = require('bcryptjs');
 const prisma = require('../../config/db');
+const { invalidateUserCache } = require('../../middlewares/auth.middleware');
 
 class UsersService {
   async listUsers() {
@@ -146,6 +147,8 @@ class UsersService {
       },
     });
 
+    invalidateUserCache(id);
+
     return {
       email: user.email,
       temporaryPassword: tempPassword,
@@ -170,6 +173,8 @@ class UsersService {
       },
     });
 
+    invalidateUserCache(id);
+
     return updated;
   }
 
@@ -177,6 +182,8 @@ class UsersService {
     await prisma.user.delete({
       where: { id },
     });
+
+    invalidateUserCache(id);
 
     return { message: 'User deleted successfully' };
   }

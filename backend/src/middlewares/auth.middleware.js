@@ -2,6 +2,19 @@ const jwt = require('jsonwebtoken');
 const env = require('../config/env');
 const prisma = require('../config/db');
 
+// Short-lived in-memory user cache to avoid database lookups on every request.
+// TTL: 60 seconds (60,000 ms).
+const USER_CACHE_TTL_MS = 60 * 1000;
+const userCache = new Map();
+
+function invalidateUserCache(userId) {
+  if (userId) {
+    userCache.delete(userId);
+  } else {
+    userCache.clear();
+  }
+}
+
 async function authenticate(req, res, next) {
   try {
     let token = null;
@@ -26,20 +39,34 @@ async function authenticate(req, res, next) {
 
     const decoded = jwt.verify(token, env.JWT_SECRET);
 
-    const user = await prisma.user.findUnique({
-      where: { id: decoded.userId },
-      select: {
-        id: true,
-        email: true,
-        role: true,
-        isFirstLogin: true,
-      },
-    });
+    const now = Date.now();
+    const cached = userCache.get(decoded.userId);
+    let user;
 
-    if (!user) {
-      return res.status(401).json({
-        success: false,
-        message: 'Invalid token: user not found.',
+    if (cached && cached.expiresAt > now) {
+      user = cached.user;
+    } else {
+      user = await prisma.user.findUnique({
+        where: { id: decoded.userId },
+        select: {
+          id: true,
+          email: true,
+          role: true,
+          isFirstLogin: true,
+        },
+      });
+
+      if (!user) {
+        userCache.delete(decoded.userId);
+        return res.status(401).json({
+          success: false,
+          message: 'Invalid token: user not found.',
+        });
+      }
+
+      userCache.set(decoded.userId, {
+        user,
+        expiresAt: now + USER_CACHE_TTL_MS,
       });
     }
 
@@ -83,4 +110,5 @@ function requireRole(...allowedRoles) {
 module.exports = {
   authenticate,
   requireRole,
+  invalidateUserCache,
 };

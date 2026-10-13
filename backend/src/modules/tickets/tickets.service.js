@@ -100,16 +100,22 @@ class TicketsService {
 
     const tickets = await prisma.ticket.findMany({
       where,
-      include: {
-        category: true,
-        staff: {
-          select: { id: true, email: true },
-        },
-        technician: {
-          select: { id: true, email: true },
+      select: {
+        id: true,
+        description: true,
+        status: true,
+        priority: true,
+        deviceLocation: true,
+        createdAt: true,
+        category: {
+          select: {
+            id: true,
+            name: true,
+          },
         },
       },
       orderBy: { createdAt: 'desc' },
+      take: 100,
     });
 
     return tickets;

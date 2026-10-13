@@ -44,6 +44,8 @@ model User {
   ticketsCreated  Ticket[]      @relation("StaffTickets")
   ticketsAssigned Ticket[]      @relation("TechnicianTickets")
   activityLogs    ActivityLog[]
+
+  @@index([role])
 }
 
 model Ticket {
@@ -62,6 +64,12 @@ model Ticket {
   resolvedAt     DateTime?
 
   activityLogs   ActivityLog[]
+
+  @@index([staffId])
+  @@index([technicianId])
+  @@index([status])
+  @@index([createdAt])
+  @@index([categoryId])
 }
 
 model Category {
@@ -78,6 +86,8 @@ model ActivityLog {
   userId    String
   action    String
   timestamp DateTime @default(now())
+
+  @@index([ticketId])
 }
 
 model Equipment {

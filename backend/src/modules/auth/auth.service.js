@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const prisma = require('../../config/db');
 const env = require('../../config/env');
+const { invalidateUserCache } = require('../../middlewares/auth.middleware');
 
 function generateToken(user) {
   return jwt.sign(
@@ -142,6 +143,8 @@ class AuthService {
       },
     });
 
+    invalidateUserCache(userId);
+
     const token = generateToken(updatedUser);
 
     return {
@@ -241,6 +244,8 @@ class AuthService {
         updatedAt: true,
       },
     });
+
+    invalidateUserCache(user.id);
 
     return {
       message: 'Password has been reset successfully. You can now log in with your new password.',

@@ -161,12 +161,6 @@ export default function Dashboard() {
               >
                 Analytics
               </Link>
-              <Link
-                href="/qr-code"
-                className="text-sm text-[#0B2545] font-semibold hover:text-[#C9A227] transition"
-              >
-                QR Code
-              </Link>
             </>
           )}
           <div className="flex items-center gap-2">
@@ -210,22 +204,65 @@ export default function Dashboard() {
         <div className="grid grid-cols-3 gap-4 mb-8">
           <div className="bg-white rounded-lg border border-[#E2E8F0] p-4">
             <p className="text-xs text-[#64748B]">{statLabels.open}</p>
-            <p className="text-2xl font-bold text-[#0B2545]">{openCount}</p>
+            {isFetching ? (
+              <div className="h-8 w-12 bg-slate-200 rounded mt-1 animate-pulse" />
+            ) : (
+              <p className="text-2xl font-bold text-[#0B2545]">{openCount}</p>
+            )}
           </div>
           <div className="bg-white rounded-lg border border-[#E2E8F0] p-4">
             <p className="text-xs text-[#64748B]">{statLabels.inProgress}</p>
-            <p className="text-2xl font-bold text-[#C9A227]">{inProgressCount}</p>
+            {isFetching ? (
+              <div className="h-8 w-12 bg-slate-200 rounded mt-1 animate-pulse" />
+            ) : (
+              <p className="text-2xl font-bold text-[#C9A227]">{inProgressCount}</p>
+            )}
           </div>
           <div className="bg-white rounded-lg border border-[#E2E8F0] p-4">
             <p className="text-xs text-[#64748B]">{statLabels.resolved}</p>
-            <p className="text-2xl font-bold text-green-600">{resolvedCount}</p>
+            {isFetching ? (
+              <div className="h-8 w-12 bg-slate-200 rounded mt-1 animate-pulse" />
+            ) : (
+              <p className="text-2xl font-bold text-green-600">{resolvedCount}</p>
+            )}
           </div>
         </div>
 
         {/* Ticket table */}
         <div className="bg-white rounded-lg border border-[#E2E8F0] overflow-hidden">
           {isFetching ? (
-            <p className="px-4 py-6 text-sm text-[#64748B]">Loading tickets...</p>
+            <table className="w-full text-sm">
+              <thead className="bg-[#F8FAFC] text-[#64748B] text-left">
+                <tr>
+                  <th className="px-4 py-3">Ticket ID</th>
+                  <th className="px-4 py-3">Category</th>
+                  <th className="px-4 py-3">Description</th>
+                  <th className="px-4 py-3">Status</th>
+                  <th className="px-4 py-3"></th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#E2E8F0] animate-pulse">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <tr key={i}>
+                    <td className="px-4 py-3.5">
+                      <div className="h-4 bg-slate-200 rounded w-16" />
+                    </td>
+                    <td className="px-4 py-3.5">
+                      <div className="h-4 bg-slate-200 rounded w-24" />
+                    </td>
+                    <td className="px-4 py-3.5">
+                      <div className="h-4 bg-slate-200 rounded w-48 max-w-xs" />
+                    </td>
+                    <td className="px-4 py-3.5">
+                      <div className="h-5 bg-slate-200 rounded-full w-20" />
+                    </td>
+                    <td className="px-4 py-3.5">
+                      <div className="h-4 bg-slate-200 rounded w-12" />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           ) : tickets.length === 0 ? (
             <p className="px-4 py-6 text-sm text-[#64748B]">
               {emptyMessage}
@@ -252,7 +289,18 @@ export default function Dashboard() {
               </thead>
               <tbody>
                 {tickets.map((t) => (
-                  <tr key={t.id} className="border-t border-[#E2E8F0] hover:bg-[#F8FAFC]">
+                  <tr
+                    key={t.id}
+                    onClick={() => router.push(`/ticket/${t.id}`)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        router.push(`/ticket/${t.id}`);
+                      }
+                    }}
+                    tabIndex={0}
+                    role="link"
+                    className="border-t border-[#E2E8F0] hover:bg-[#F8FAFC] cursor-pointer focus:outline-none focus:bg-[#F8FAFC]"
+                  >
                     <td className="px-4 py-3 font-medium text-[#0B2545]">
                       #{t.id.slice(0, 8)}
                     </td>
@@ -262,19 +310,17 @@ export default function Dashboard() {
                     </td>
                     <td className="px-4 py-3">
                       <span
-                        className={`px-2.5 py-1 rounded-full text-xs font-semibold ${statusStyles[t.status] || "bg-gray-100 text-gray-600"
-                          }`}
+                        className={`px-2.5 py-1 rounded-full text-xs font-semibold ${
+                          statusStyles[t.status] || "bg-gray-100 text-gray-600"
+                        }`}
                       >
                         {formatStatus(t.status)}
                       </span>
                     </td>
                     <td className="px-4 py-3">
-                      <Link
-                        href={`/ticket/${t.id}`}
-                        className="text-[#0B2545] hover:text-[#C9A227] font-medium"
-                      >
+                      <span className="text-[#0B2545] font-medium">
                         View →
-                      </Link>
+                      </span>
                     </td>
                   </tr>
                 ))}
